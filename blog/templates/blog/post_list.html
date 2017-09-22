@@ -4,7 +4,22 @@
 </head>
 
 <body>
-    hola hola, chi passa per l'aiola..!
+    <h2>titolo</h2>
+    <p>
+        hola hola, chi passa per l'aiola..!
+    </p>
+
+    <h3>qui i post</h3>
+
+    {% for post in posts %}
+        <div>
+            <p>pubblicato: {{post.published_date}}</p>
+            <h4><a href="">{{ post.title }}</a></h4>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    
+    {% endfor %}
+
 </body>
 
 
